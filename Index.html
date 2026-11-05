@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Church: Our Eternal Family</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 320px;
+        }
+        @media (min-width: 640px) {
+            .chart-container {
+                height: 400px;
+                max-height: 400px;
+            }
+        }
+        .stat-number {
+            font-weight: 900;
+            font-size: 4.5rem;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100" style="background-color: #F0F4F8;">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+        
+        <header class="text-center my-8 md:my-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold" style="color: #00A0B0;">The Church: Our Eternal Family</h1>
+            <p class="text-lg md:text-xl mt-4" style="color: #6A4A3C;">A visual guide to the identity and mission of the Church based on USCCA Chapters 10 & 11.</p>
+        </header>
+
+        <section class="my-12">
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8 text-center">
+                <h2 class="text-2xl font-bold mb-4" style="color: #CC333F;">The Communion of Saints: An Eternal Family</h2>
+                <p class="text-base md:text-lg mb-6" style="color: #6A4A3C;">On All Souls' Day (Nov 2nd), we are reminded that the Church is an eternal community that spans three states. We are all connected, praying for and supporting one another.</p>
+                <div class="chart-container">
+                    <canvas id="communionChart"></canvas>
+                </div>
+                <p class="text-sm mt-4" style="color: #6A4A3C;">This chart illustrates the three states of the one Church: all members united in Christ, whether on Earth, in purification, or in glory.</p>
+            </div>
+        </section>
+
+        <section class="my-12">
+            <h2 class="text-3xl font-bold text-center mb-8" style="color: #00A0B0;">Part 1: The Nature of the Church (Chapter 10)</h2>
+            <p class="text-lg text-center mb-8" style="color: #6A4A3C;">Chapter 10 asks, "What is the Church?" It is a profound mystery explained through three key images showing its relationship with God.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                    <span class="text-5xl mb-3">👥</span>
+                    <h3 class="text-2xl font-bold mb-3" style="color: #EB6841;">1. The People of God (Called)</h3>
+                    <p class="mb-4" style="color: #6A4A3C;">We are a community called out by God. Every baptized person shares in Christ's three offices:</p>
+                    <div class="space-y-2 w-full">
+                        <div class="rounded p-3 text-white font-semibold" style="background-color: #EB6841;">Priestly (To Worship)</div>
+                        <div class="rounded p-3 text-white font-semibold" style="background-color: #EB6841;">Prophetic (To Proclaim)</div>
+                        <div class="rounded p-3 text-white font-semibold" style="background-color: #EB6841;">Kingly (To Serve)</div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                    <span class="text-5xl mb-3">🤝</span>
+                    <h3 class="text-2xl font-bold mb-3" style="color: #00A0B0;">2. The Body of Christ (United)</h3>
+                    <p class="mb-4" style="color: #6A4A3C;">Christ is the Head, and we are the members. This image highlights two core truths: Unity and Diversity. Every person is essential.</p>
+                    <div class="chart-container" style="height: 200px; max-height: 200px; max-width: 200px;">
+                        <canvas id="bodyChart"></canvas>
+                    </div>
+                    <p class="text-sm mt-4" style="color: #6A4A3C;">We are one Body, with diverse vocations and talents, all necessary for the whole.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+                    <span class="text-5xl mb-3">🔥</span>
+                    <h3 class="text-2xl font-bold mb-3" style="color: #EDC951;">3. Temple of the Holy Spirit (Animated)</h3>
+                    <p class="mb-4" style="color: #6A4A3C;">The Holy Spirit is the "soul of the Church," giving it life, guiding its leaders, and helping every member grow in holiness.</p>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <p class="text-lg font-semibold" style="color: #EDC951;">The Spirit:</p>
+                        <ul class="list-disc list-inside text-left" style="color: #6A4A3C;">
+                            <li>Gives Life (Sanctifies)</li>
+                            <li>Unifies (Builds Community)</li>
+                            <li>Guides (Leads to Truth)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-12">
+            <h2 class="text-3xl font-bold text-center mb-8" style="color: #00A0B0;">Part 2: The Four Marks of the Church (Chapter 11)</h2>
+            <p class="text-lg text-center mb-8" style="color: #6A4A3C;">Chapter 11 answers, "How do we recognize the Church?" It is identified by four essential Marks we profess in the Creed.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #CC333F;">1. The Church is ONE</h3>
+                    <p class="mb-4" style="color: #6A4A3C;">The Church is one in its source (God), founder (Jesus), and spirit. This unity is visible through three key bonds:</p>
+                    <div class="chart-container" style="max-width: 400px; height: 300px; max-height: 300px;">
+                        <canvas id="oneChart"></canvas>
+                    </div>
+                    <p class="text-sm mt-4 text-center" style="color: #6A4A3C;">These three bonds—shared Faith, universal Worship, and unified Leadership (Magisterium)—protect the Church's unity.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #EB6841;">2. The Church is HOLY</h3>
+                    <p class="mb-4" style="color: #6A4A3C;">Its source is Christ (100% Holy) and its purpose is to make us holy. This creates a paradox: the Church is a "hospital for sinners," a perfect institution for imperfect people.</p>
+                    <div class="bg-gray-50 rounded-lg shadow-inner p-6 text-center">
+                        <p class="text-lg font-semibold" style="color: #EB6841;">A Paradox of Grace</p>
+                        <div class="flex items-center justify-center my-4">
+                            <div class="text-center p-4">
+                                <p class="stat-number" style="color: #EB6841;">100%</p>
+                                <p class="font-semibold" style="color: #6A4A3C;">Holy Source (Christ)</p>
+                            </div>
+                            <div class="text-4xl font-light mx-4" style="color: #00A0B0;">+</div>
+                            <div class="text-center p-4">
+                                <p class="stat-number" style="color: #EB6841;">GROW</p>
+                                <p class="font-semibold" style="color: #6A4A3C;">Imperfect Members (Us)</p>
+                            </div>
+                        </div>
+                        <p class="text-sm" style="color: #6A4A3C;">The evidence of its holiness is the Saints—ordinary people transformed by God's grace.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #EDC951;">3. The Church is CATHOLIC</h3>
+                    <p class="mb-4" style="color: #6A4A3C;">"Catholic" means **universal**. The Church holds the fullness of truth and is sent to all people, in all times, in all places. This results in beautiful global diversity.</p>
+                    <div class="chart-container" style="height: 300px; max-height: 300px; max-width: 500px;">
+                        <canvas id="catholicChart"></canvas>
+                    </div>
+                    <p class="text-sm mt-4 text-center" style="color: #6A4A3C;">Hypothetical distribution of the global Catholic population, demonstrating its universal reach.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #00A0B0;">4. The Church is APOSTOLIC</h3>
+                    <p class="mb-4" style="color: #6A4A3C;">The Church is built on the foundation of the Apostles. Its teachings and authority trace directly back to Jesus through Apostolic Succession.</p>
+                    <div class="mt-6 flow-root">
+                        <ul class="space-y-4 text-center">
+                            <li>
+                                <div class="rounded-lg shadow p-3 font-bold text-lg" style="background-color: #00A0B0; color: white;">Jesus Christ (The Founder)</div>
+                            </li>
+                            <li class="flex justify-center">
+                                <span class="text-4xl font-bold" style="color: #00A0B0;">⬇</span>
+                            </li>
+                            <li>
+                                <div class="rounded-lg shadow p-3 font-semibold" style="background-color: #E0F7FA; color: #007A8A;">The Apostles (The Foundation)</div>
+                            </li>
+                            <li class="flex justify-center">
+                                <span class="text-4xl font-bold" style="color: #00A0B0;">⬇</span>
+                            </li>
+                            <li>
+                                <div class="rounded-lg shadow p-3 font-semibold" style="background-color: #E0F7FA; color: #007A8A;">Apostolic Succession (Bishops)</div>
+                            </li>
+                             <li class="flex justify-center">
+                                <span class="text-4xl font-bold" style="color: #00A0B0;">⬇</span>
+                            </li>
+                            <li>
+                                <div class="rounded-lg shadow p-3 font-semibold" style="background-color: #E0F7FA; color: #007A8A;">Today's Church (Our Mission)</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center my-12">
+            <div class="bg-white rounded-lg shadow-xl p-8">
+                <h2 class="text-3xl font-bold" style="color: #00A0B0;">We Are All Part of This Family</h2>
+                <p class="text-lg mt-4" style="color: #6A4A3C;">From the Body of Christ to the Four Marks, the Church is revealed as a unified, holy, universal, and divinely-founded family. We are all called to participate in its mission.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        (function() {
+            
+            const sharedTooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            };
+            
+            const sharedChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                size: 12
+                            },
+                            color: '#6A4A3C'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: sharedTooltipTitleCallback
+                        },
+                        backgroundColor: '#6A4A3C',
+                        titleFont: {
+                            size: 14,
+                            weight: 'bold'
+                        },
+                        bodyFont: {
+                            size: 12
+                        },
+                        padding: 10,
+                        cornerRadius: 4
+                    }
+                }
+            };
+
+            const chartColors = {
+                teal: '#00A0B0',
+                brown: '#6A4A3C',
+                red: '#CC333F',
+                orange: '#EB6841',
+                yellow: '#EDC951'
+            };
+
+            const communionData = {
+                labels: [
+                    ['Church Triumphant', '(Saints in Heaven)'],
+                    ['Church Suffering', '(Souls in Purgatory)'],
+                    ['Church Militant', '(Faithful on Earth)']
+                ],
+                datasets: [{
+                    label: 'Communion of Saints',
+                    data: [33.3, 33.3, 33.3],
+                    backgroundColor: [
+                        chartColors.yellow,
+                        chartColors.orange,
+                        chartColors.teal
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            };
+            new Chart(document.getElementById('communionChart'), {
+                type: 'pie',
+                data: communionData,
+                options: { 
+                    ...sharedChartOptions,
+                    plugins: {
+                        ...sharedChartOptions.plugins,
+                        legend: {
+                            ...sharedChartOptions.plugins.legend,
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+
+            const bodyData = {
+                labels: ['Unity', 'Diversity'],
+                datasets: [{
+                    data: [50, 50],
+                    backgroundColor: [
+                        chartColors.teal,
+                        chartColors.orange
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            };
+            new Chart(document.getElementById('bodyChart'), {
+                type: 'doughnut',
+                data: bodyData,
+                options: { ...sharedChartOptions, cutout: '70%' }
+            });
+
+            const oneData = {
+                labels: [['Unity of', 'Faith'], ['Unity of', 'Worship'], ['Unity of', 'Leadership']],
+                datasets: [{
+                    data: [33.3, 33.3, 33.3],
+                    backgroundColor: [
+                        chartColors.red,
+                        chartColors.teal,
+                        chartColors.yellow
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            };
+            new Chart(document.getElementById('oneChart'), {
+                type: 'doughnut',
+                data: oneData,
+                options: { 
+                    ...sharedChartOptions, 
+                    cutout: '70%',
+                    plugins: {
+                        ...sharedChartOptions.plugins,
+                        legend: {
+                            ...sharedChartOptions.plugins.legend,
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+
+            const catholicData = {
+                labels: ['Africa', 'Americas', 'Europe', ['Asia &', 'Oceania']],
+                datasets: [{
+                    label: 'Global Catholic Population (Example)',
+                    data: [18, 48, 22, 12],
+                    backgroundColor: [
+                        chartColors.teal,
+                        chartColors.orange,
+                        chartColors.red,
+                        chartColors.yellow
+                    ],
+                    borderColor: chartColors.brown,
+                    borderWidth: 1
+                }]
+            };
+            new Chart(document.getElementById('catholicChart'), {
+                type: 'bar',
+                data: catholicData,
+                options: {
+                    ...sharedChartOptions,
+                    indexAxis: 'y',
+                    plugins: {
+                        ...sharedChartOptions.plugins,
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%'
+                                },
+                                color: '#6A4A3C'
+                            },
+                            grid: {
+                                display: false
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                color: '#6A4A3C'
+                            },
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+
+        })();
+    </script>
+</body>
+</html>
