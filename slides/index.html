@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Church: Our Eternal Family (Slides)</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/white.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --c-teal: #00A0B0;
+            --c-brown: #6A4A3C;
+            --c-red: #CC333F;
+            --c-orange: #EB6841;
+            --c-yellow: #EDC951;
+            --c-bg: #F0F4F8;
+            --c-teal-light: #E0F7FA;
+            --c-teal-dark: #007A8A;
+            --r-main-font: 'Inter', sans-serif;
+            --r-heading-font: 'Inter', sans-serif;
+            --r-background-color: var(--c-bg);
+            --r-main-color: var(--c-brown);
+            --r-heading-color: var(--c-teal);
+            --r-heading-text-transform: none;
+            --r-heading1-size: 2.4em;
+            --r-heading2-size: 1.6em;
+            --r-heading3-size: 1.1em;
+            --r-main-font-size: 32px;
+        }
+        .reveal h1, .reveal h2, .reveal h3 { font-weight: 800; }
+        .reveal .subtitle { color: var(--c-brown); font-size: 0.8em; }
+        .reveal .cards { display: flex; gap: 1em; justify-content: center; align-items: stretch; }
+        .reveal .card { background: #fff; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,.08); padding: .8em 1em; flex: 1; font-size: .6em; text-align: center; }
+        .reveal .card h3 { margin: .2em 0 .4em; }
+        .reveal .card .icon { font-size: 2.4em; display: block; }
+        .reveal .pill { color: #fff; font-weight: 600; border-radius: 6px; padding: .3em; margin: .25em 0; }
+        .reveal .pill.orange { background: var(--c-orange); }
+        .reveal .pill.teal { background: var(--c-teal); }
+        .reveal .pill.teal-light { background: var(--c-teal-light); color: var(--c-teal-dark); }
+        .reveal .chart { position: relative; margin: 0 auto; }
+        .reveal .chart.lg { width: 460px; height: 340px; }
+        .reveal .chart.md { width: 420px; height: 320px; }
+        .reveal .chart.sm { width: 240px; height: 240px; }
+        .reveal .two-col { display: flex; gap: 1.5em; align-items: center; justify-content: center; }
+        .reveal .two-col > * { flex: 1; min-width: 0; }
+        .reveal .two-col > .chart { flex: none; }
+        .reveal .two-col p { font-size: .75em; text-align: left; }
+        .reveal .stat { font-weight: 900; font-size: 2.2em; line-height: 1; color: var(--c-orange); }
+        .reveal .stat-row { display: flex; justify-content: center; align-items: center; gap: .6em; font-size: .7em; }
+        .reveal .stat-row .plus { color: var(--c-teal); font-size: 1.8em; font-weight: 300; }
+        .reveal .flow { list-style: none; margin: 0 auto; padding: 0; width: 60%; font-size: .7em; text-align: center; }
+        .reveal .flow li { margin: .2em 0; }
+        .reveal .flow .arrow { color: var(--c-teal); font-size: 1.4em; font-weight: 700; }
+        .reveal .spirit { background: #f7f9fb; border-radius: 10px; padding: .6em 1em; text-align: left; font-size: .9em; }
+        .reveal .spirit strong { color: var(--c-yellow); display: block; text-align: center; }
+        .reveal .caption { font-size: .55em; color: var(--c-brown); }
+        .reveal .h-red { color: var(--c-red); }
+        .reveal .h-orange { color: var(--c-orange); }
+        .reveal .h-yellow { color: var(--c-yellow); }
+        .reveal .h-teal { color: var(--c-teal); }
+        .reveal .hint { position: fixed; bottom: 14px; right: 18px; font-size: 14px; color: var(--c-brown); opacity: .55; z-index: 10; }
+    </style>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+
+        <section>
+            <h1>The Church: Our Eternal Family</h1>
+            <p class="subtitle">A visual guide to the identity and mission of the Church based on USCCA Chapters 10 &amp; 11</p>
+            <aside class="notes">
+                Welcome. Tonight we look at two chapters of the United States Catholic Catechism for Adults: chapter 10, which asks what the Church is, and chapter 11, which asks how we recognize her. Press S to open this presenter view on your laptop; the projector window follows along automatically.
+            </aside>
+        </section>
+
+        <section>
+            <h2 class="h-red">The Communion of Saints: An Eternal Family</h2>
+            <div class="two-col">
+                <div class="chart lg"><canvas id="communionChart"></canvas></div>
+                <p>On All Souls' Day (Nov 2nd), we are reminded that the Church is an eternal community that spans three states. We are all connected, praying for and supporting one another.</p>
+            </div>
+            <p class="caption">All members united in Christ, whether on Earth, in purification, or in glory.</p>
+            <aside class="notes">
+                Three states, one Church. The Church Triumphant is the saints in heaven. The Church Suffering is the souls in purgatory being purified. The Church Militant is us, the faithful still on earth. The point of the chart is not proportion; it is that no state is cut off from the others. We pray for the souls in purgatory; the saints intercede for us. Ask: who do you pray for on All Souls' Day?
+            </aside>
+        </section>
+
+        <section>
+            <h2>Part 1: The Nature of the Church (Chapter 10)</h2>
+            <p class="subtitle">Chapter 10 asks, "What is the Church?" It is a profound mystery explained through three key images showing its relationship with God.</p>
+            <aside class="notes">
+                Chapter 10 does not give a single definition. It gives three images, each showing the Church's relationship with one Person of the Trinity: called by the Father, united in the Son, animated by the Spirit. We take them one at a time.
+            </aside>
+        </section>
+
+        <section>
+            <h2 class="h-orange">1. The People of God (Called)</h2>
+            <div class="two-col">
+                <p>We are a community called out by God. Every baptized person shares in Christ's three offices.</p>
+                <div>
+                    <div class="pill orange">Priestly (To Worship)</div>
+                    <div class="pill orange">Prophetic (To Proclaim)</div>
+                    <div class="pill orange">Kingly (To Serve)</div>
+                </div>
+            </div>
+            <aside class="notes">
+                The word "church" comes from a Greek word meaning those called out. God called Israel; in Christ he calls everyone. At baptism each of us is anointed priest, prophet and king. Priestly: we offer worship, especially at Mass. Prophetic: we proclaim the Gospel by word and by the way we live. Kingly: we serve, as Christ the King washed feet. These are not reserved to clergy; they belong to every baptized person.
+            </aside>
+        </section>
+
+        <section>
+            <h2 class="h-teal">2. The Body of Christ (United)</h2>
+            <div class="two-col">
+                <p>Christ is the Head, and we are the members. This image highlights two core truths: Unity and Diversity. Every person is essential.</p>
+                <div class="chart sm"><canvas id="bodyChart"></canvas></div>
+            </div>
+            <p class="caption">One Body, with diverse vocations and talents, all necessary for the whole.</p>
+            <aside class="notes">
+                Saint Paul's image from 1 Corinthians 12. A body has one head and many members, and the eye cannot say to the hand, I have no need of you. Unity: one Head, one life. Diversity: different gifts, vocations and roles, none of them optional. Ask the group what gifts they see in each other.
+            </aside>
+        </section>
+
+        <section>
+            <h2 class="h-yellow">3. Temple of the Holy Spirit (Animated)</h2>
+            <div class="two-col">
+                <p>The Holy Spirit is the "soul of the Church," giving it life, guiding its leaders, and helping every member grow in holiness.</p>
+                <div class="spirit">
+                    <strong>The Spirit:</strong>
+                    <ul>
+                        <li>Gives Life (Sanctifies)</li>
+                        <li>Unifies (Builds Community)</li>
+                        <li>Guides (Leads to Truth)</li>
+                    </ul>
+                </div>
+            </div>
+            <aside class="notes">
+                If the Church is a body, the Spirit is its soul. Without the Spirit, the Church would be an institution; with him, it is alive. He sanctifies each member, he holds the community together, and he guides the Church into all truth, which is why we trust the Church's teaching across centuries.
+            </aside>
+        </section>
+
+        <section>
+            <h2>Part 2: The Four Marks of the Church (Chapter 11)</h2>
+            <p class="subtitle">Chapter 11 answers, "How do we recognize the Church?" It is identified by four essential Marks we profess in the Creed.</p>
+            <aside class="notes">
+                Every Sunday we say: I believe in one, holy, catholic and apostolic Church. Those four adjectives are the Marks. They are not achievements of ours; they are gifts of Christ to his Church, and we are called to live them out visibly.
+            </aside>
+        </section>
+
+        <section>
+            <h2 class="h-red">1. The Church is ONE</h2>
+            <div class="two-col">
+                <p>The Church is one in its source (God), founder (Jesus), and spirit. This unity is visible through three key bonds.</p>
+                <div class="chart md"><canvas id="oneChart"></canvas></div>
+            </div>
+            <p class="caption">Shared Faith, universal Worship, and unified Leadership (Magisterium) protect the Church's unity.</p>
+            <aside class="notes">
+                One source, the Trinity. One founder, Jesus. One soul, the Spirit. The three visible bonds: the same faith professed everywhere, the same sacraments celebrated everywhere, and apostolic succession under the Pope and bishops. Divisions among Christians wound this unity, which is why we pray and work for it.
+            </aside>
+        </section>
+
+        <section>
+            <h2 class="h-orange">2. The Church is HOLY</h2>
+            <p class="subtitle">Its source is Christ and its purpose is to make us holy. The Church is a "hospital for sinners," a perfect institution for imperfect people.</p>
+            <div class="stat-row">
+                <div><div class="stat">100%</div>Holy Source (Christ)</div>
+                <div class="plus">+</div>
+                <div><div class="stat">GROW</div>Imperfect Members (Us)</div>
+            </div>
+            <p class="caption">The evidence of its holiness is the Saints: ordinary people transformed by God's grace.</p>
+            <aside class="notes">
+                Someone will ask: how can the Church be holy when its members sin? Holiness comes from Christ, the source, not from us. The Church carries the means of holiness, the sacraments and the Word, and we are the patients in the hospital. The proof that the hospital works is the saints: ordinary people who let grace transform them.
+            </aside>
+        </section>
+
+        <section>
+            <h2 class="h-yellow">3. The Church is CATHOLIC</h2>
+            <div class="two-col">
+                <p>"Catholic" means <strong>universal</strong>. The Church holds the fullness of truth and is sent to all people, in all times, in all places.</p>
+                <div class="chart md"><canvas id="catholicChart"></canvas></div>
+            </div>
+            <p class="caption">Hypothetical distribution of the global Catholic population, demonstrating its universal reach.</p>
+            <aside class="notes">
+                Catholic means universal in two senses. First, the Church has the fullness of the means of salvation. Second, she is sent to the whole world. The chart is illustrative, not a census; the point is that the Church is on every continent and in every culture, and that diversity is part of her beauty.
+            </aside>
+        </section>
+
+        <section>
+            <h2 class="h-teal">4. The Church is APOSTOLIC</h2>
+            <p class="subtitle">The Church is built on the foundation of the Apostles. Its teachings and authority trace directly back to Jesus through Apostolic Succession.</p>
+            <ul class="flow">
+                <li><div class="pill teal">Jesus Christ (The Founder)</div></li>
+                <li class="arrow">⬇</li>
+                <li><div class="pill teal-light">The Apostles (The Foundation)</div></li>
+                <li class="arrow">⬇</li>
+                <li><div class="pill teal-light">Apostolic Succession (Bishops)</div></li>
+                <li class="arrow">⬇</li>
+                <li><div class="pill teal-light">Today's Church (Our Mission)</div></li>
+            </ul>
+            <aside class="notes">
+                Apostolic in three ways: founded on the Apostles, keeping the Apostles' teaching, and led by the Apostles' successors, the bishops in union with the Pope. This is an unbroken chain of hands laid on heads from the first century to your own bishop. And it ends with us: the Apostles were sent, and so are we.
+            </aside>
+        </section>
+
+        <section>
+            <h2>We Are All Part of This Family</h2>
+            <p class="subtitle">From the Body of Christ to the Four Marks, the Church is revealed as a unified, holy, universal, and divinely-founded family. We are all called to participate in its mission.</p>
+            <aside class="notes">
+                Close by bringing it back to the first slide: an eternal family. Invite questions. Suggested take-home: pick one of the three offices, priest, prophet or king, and name one concrete way to live it this week.
+            </aside>
+        </section>
+
+    </div>
+</div>
+<div class="hint">Press S for presenter view</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/notes/notes.min.js"></script>
+<script>
+(function () {
+    const COLORS = { teal: '#00A0B0', brown: '#6A4A3C', red: '#CC333F', orange: '#EB6841', yellow: '#EDC951', white: '#ffffff' };
+    const EQUAL_THIRDS = [33.3, 33.3, 33.3];
+    const EQUAL_HALVES = [50, 50];
+    const DOUGHNUT_CUTOUT = '70%';
+    const LEGEND_FONT_SIZE = 14;
+
+    const baseOptions = (legendPosition) => ({
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: false,
+        plugins: {
+            legend: { position: legendPosition, labels: { font: { size: LEGEND_FONT_SIZE }, color: COLORS.brown } },
+        },
+    });
+
+    const CHARTS = [
+        {
+            id: 'communionChart', type: 'pie', legend: 'right',
+            labels: [['Church Triumphant', '(Saints in Heaven)'], ['Church Suffering', '(Souls in Purgatory)'], ['Church Militant', '(Faithful on Earth)']],
+            data: EQUAL_THIRDS, colors: [COLORS.yellow, COLORS.orange, COLORS.teal],
+        },
+        {
+            id: 'bodyChart', type: 'doughnut', legend: 'bottom',
+            labels: ['Unity', 'Diversity'], data: EQUAL_HALVES, colors: [COLORS.teal, COLORS.orange], cutout: DOUGHNUT_CUTOUT,
+        },
+        {
+            id: 'oneChart', type: 'doughnut', legend: 'right',
+            labels: [['Unity of', 'Faith'], ['Unity of', 'Worship'], ['Unity of', 'Leadership']],
+            data: EQUAL_THIRDS, colors: [COLORS.red, COLORS.teal, COLORS.yellow], cutout: DOUGHNUT_CUTOUT,
+        },
+        {
+            id: 'catholicChart', type: 'bar', legend: false,
+            labels: ['Africa', 'Americas', 'Europe', ['Asia &', 'Oceania']],
+            data: [18, 48, 22, 12], colors: [COLORS.teal, COLORS.orange, COLORS.red, COLORS.yellow],
+            extra: {
+                indexAxis: 'y',
+                scales: {
+                    x: { ticks: { callback: (v) => v + '%', color: COLORS.brown }, grid: { display: false } },
+                    y: { ticks: { color: COLORS.brown }, grid: { display: false } },
+                },
+            },
+        },
+    ];
+
+    const buildChart = (spec) => {
+        const options = { ...baseOptions(spec.legend || 'bottom'), ...(spec.extra || {}) };
+        if (spec.legend === false) options.plugins.legend = { display: false };
+        if (spec.cutout) options.cutout = spec.cutout;
+        return new Chart(document.getElementById(spec.id), {
+            type: spec.type,
+            data: {
+                labels: spec.labels,
+                datasets: [{ data: spec.data, backgroundColor: spec.colors, borderColor: spec.type === 'bar' ? COLORS.brown : COLORS.white, borderWidth: spec.type === 'bar' ? 1 : 2 }],
+            },
+            options,
+        });
+    };
+
+    Reveal.initialize({
+        hash: true,
+        width: 1280,
+        height: 720,
+        margin: 0.06,
+        transition: 'fade',
+        plugins: [RevealNotes],
+    });
+
+    Reveal.on('ready', () => CHARTS.forEach(buildChart));
+})();
+</script>
+</body>
+</html>
