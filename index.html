@@ -7,12 +7,12 @@
     <title>The Church: Our Eternal Family</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap">
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
-        
+
         .chart-container {
             position: relative;
             width: 100%;
@@ -32,6 +32,16 @@
             font-weight: 900;
             font-size: 4.5rem;
             line-height: 1;
+        }
+        @media print {
+            @page { size: letter; margin: 0.25in; }
+            .print-break { break-before: page; }
+            body { background-color: #ffffff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .container { padding: 0 !important; max-width: none !important; }
+            header, footer, .grid > div, section > .bg-white { break-inside: avoid; }
+            h2 { break-after: avoid; }
+            .shadow-lg, .shadow-xl { box-shadow: none !important; border: 1px solid #d9e2ec; }
+            .stat-number { font-size: 2.5rem; }
         }
     </style>
 </head>
@@ -97,7 +107,7 @@
             </div>
         </section>
 
-        <section class="my-12">
+        <section class="my-12 print-break">
             <h2 class="text-3xl font-bold text-center mb-8" style="color: #00A0B0;">Part 2: The Four Marks of the Church (Chapter 11)</h2>
             <p class="text-lg text-center mb-8" style="color: #6A4A3C;">Chapter 11 answers, "How do we recognize the Church?" It is identified by four essential Marks we profess in the Creed.</p>
 
@@ -134,7 +144,7 @@
 
                 <div class="bg-white rounded-lg shadow-lg p-6">
                     <h3 class="text-2xl font-bold mb-4" style="color: #EDC951;">3. The Church is CATHOLIC</h3>
-                    <p class="mb-4" style="color: #6A4A3C;">"Catholic" means **universal**. The Church holds the fullness of truth and is sent to all people, in all times, in all places. This results in beautiful global diversity.</p>
+                    <p class="mb-4" style="color: #6A4A3C;">"Catholic" means <strong>universal</strong>. The Church holds the fullness of truth and is sent to all people, in all times, in all places. This results in beautiful global diversity.</p>
                     <div class="chart-container" style="height: 300px; max-height: 300px; max-width: 500px;">
                         <canvas id="catholicChart"></canvas>
                     </div>
